@@ -1,7 +1,11 @@
 import { View } from 'react-native';
-import { Calendar, DateData } from 'react-native-calendars';
+import { Calendar, DateData, LocaleConfig } from 'react-native-calendars';
 import { styles } from './styles';
 import { useState } from 'react';
+import { ptBR } from "../../utils/configLocalCalendario"
+
+LocaleConfig.locales["pt-br"]=ptBR //? config local do traducao
+LocaleConfig.defaultLocale="pt-br"
 
 export function Home() {
     const [day,setDay] = useState<DateData>()
